@@ -1,0 +1,23 @@
+<h1 id="page-title">Register</h1>
+
+<%= form_with(model: @user, url: register_user_path, method: :post) do |form| %>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Account", id: "submit-register-user" %>
+  </div>
+<% end %>
