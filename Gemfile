@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -57,6 +54,8 @@ group :development, :test do
 end
 
 group :development do
+  # Use sqlite3 as the database for Active Record
+  gem "sqlite3", "~> 1.4"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -75,3 +74,7 @@ group :test do
 end
 
 gem "sorcery", "~> 0.16.2"
+
+group :production do
+  gem "pg", "~> 1.3"
+end
